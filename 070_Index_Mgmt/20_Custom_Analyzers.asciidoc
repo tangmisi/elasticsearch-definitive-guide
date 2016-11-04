@@ -3,7 +3,7 @@
 
 虽然Elasticsearch带有一些现成的分析器，然而在分析器上Elasticsearch真正的强大之处在于，你可以通过在一个适合你的特定数据的设置之中组合字符过滤器、分词器、词汇单元过滤器来创建自定义的分析器。
 
-在 <<analysis-intro>> 我们说过，一个 _分词器_ 就是在一个包里面组合了三种函数的一个包装器， ((("analyzers", "character filters, tokenizers, and token filters in"))) 三种函数按照顺序被执行:
+在 <<analysis-intro>> 我们说过，一个 _分析器_ 就是在一个包里面组合了三种函数的一个包装器， ((("analyzers", "character filters, tokenizers, and token filters in"))) 三种函数按照顺序被执行:
 
 字符过滤器::
 +
