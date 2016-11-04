@@ -84,7 +84,7 @@ PUT /my_index
 }
 --------------------------------------------------
 
-我们的分词器定义用我们之前已经设置好的自定义过滤器组合了已经定义好的分词器和过滤器：
+我们的分析器定义用我们之前已经设置好的自定义过滤器组合了已经定义好的分词器和过滤器：
 
 [source,js]
 --------------------------------------------------
@@ -129,7 +129,7 @@ PUT /my_index
 // SENSE: 070_Index_Mgmt/20_Custom_analyzer.json
 
 
-索引被创建以后，使用 `analyze` API 来 ((("analyzers", "testing using analyze API"))) 测试这个新的分词器：
+索引被创建以后，使用 `analyze` API 来 ((("analyzers", "testing using analyze API"))) 测试这个新的分析器：
 
 [source,js]
 --------------------------------------------------
@@ -153,7 +153,7 @@ The quick & brown fox
 }
 --------------------------------------------------
 
-这个分词器现在是没有多大用处的，除非我们告诉 ((("analyzers", "custom", "telling Elasticsearch where to use")))((("mapping (types)", "applying custom analyzer to a string field"))) Elasticsearch在哪里用上它。我们可以像下面这样把这个分析器应用在一个 `string` 字段上：
+这个分析器现在是没有多大用处的，除非我们告诉 ((("analyzers", "custom", "telling Elasticsearch where to use")))((("mapping (types)", "applying custom analyzer to a string field"))) Elasticsearch在哪里用上它。我们可以像下面这样把这个分析器应用在一个 `string` 字段上：
 
 [source,js]
 --------------------------------------------------
