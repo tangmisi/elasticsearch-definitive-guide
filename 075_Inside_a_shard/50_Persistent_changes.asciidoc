@@ -9,7 +9,7 @@
 
 Elasticsearch 增加了一个 _translog_ ，或者叫事务日志，((("translog (transaction log)")))在每一次对 Elasticsearch 进行操作时均进行了日志记录。通过 translog ，整个流程看起来是下面这样：
 
-1. 一个文档被索引之后，就会被被添加到内存缓冲区，_并且_ 追加到了 translog ，正如 <<img-xlog-pre-refresh>> 描述的一样。
+1. 一个文档被索引之后，就会被添加到内存缓冲区，_并且_ 追加到了 translog ，正如 <<img-xlog-pre-refresh>> 描述的一样。
 +
 [[img-xlog-pre-refresh]]
 .新的文档被添加到内存缓冲区并且被追加到了事务日志
