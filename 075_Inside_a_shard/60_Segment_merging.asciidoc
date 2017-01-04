@@ -10,17 +10,16 @@ Elasticsearch通过在后台进行段合并来解决这个问题。((("merging s
 
 启动段合并不需要你做任何事。进行索引和搜索时会自动进行。这个流程像在 <<img-merge>> 中提到的一样工作：
 
-1. 当索引的时候，刷新（refresh）操作会创建新的段并将段打开以供搜索使用。
+1、 当索引的时候，刷新（refresh）操作会创建新的段并将段打开以供搜索使用。
 
-2. 合并进程选择一小部分大小相似的段，并且在后台将它们合并到更大的段中。这并不会中断索引和搜索。
+2、 合并进程选择一小部分大小相似的段，并且在后台将它们合并到更大的段中。这并不会中断索引和搜索。
 
-+
 [[img-merge]]
 .两个提交了的段和一个未提交的段正在被合并到一个更大的段
-image::images/elas_1110.png["两个提交了的段和一个未提交的段正在被合并到一个更大的段"]
+image::images/elas_1110.png["Two commited segments and one uncommited segment in the process of being merged into a bigger segment"]
 
-3.  <<img-post-merge>> 说明合并完成时的活动:
-+
+3、 <<img-post-merge>> 说明合并完成是的活动：
+
 --
     ** 新的段被刷新（flush）到了磁盘。
     ** 写入一个包含新段且排除旧的和较小的段的新提交点。
